@@ -65,16 +65,6 @@ const Center = () => {
       headerAlign: "left",
       align: "left",
     },
-    // {
-    //   field: "phone",
-    //   headerName: "Phone Number",
-    //   flex: 1,
-    // },
-    // {
-    //   field: "email",
-    //   headerName: "Email",
-    //   flex: 1,
-    // },
     {
       field: "accessLevel",
       headerName: "Access Level",
