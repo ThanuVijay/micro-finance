@@ -15,10 +15,14 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
 import Center from "./scenes/center";
+import Groups from "./scenes/groups";
+
+
 
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
+  
 
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -30,7 +34,9 @@ function App() {
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/center" element={<Center/>} />
+              <Route path="center" element={<Center/>}/>
+              <Route path="/groups" element={<Groups/>}/>
+              <Route path="/:id/groups" element={<Groups/>}/>
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/form" element={<Form />} />
