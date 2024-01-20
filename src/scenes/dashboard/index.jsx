@@ -1,6 +1,6 @@
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Button,  useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-import { mockTransactions } from "../../data/mockData";
+//import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
@@ -41,6 +41,7 @@ const Dashboard = () => {
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="140px"
         gap="20px"
+        padding="10px"
       >
         {/* ROW 1 */}
         <Box
@@ -52,9 +53,9 @@ const Dashboard = () => {
         >
           <StatBox
             title="12,361"
-            subtitle="Emails Sent"
+            subtitle="Total"
             progress="0.75"
-            increase="+14%"
+           // increase="+14%"
             icon={
               <EmailIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -71,9 +72,9 @@ const Dashboard = () => {
         >
           <StatBox
             title="431,225"
-            subtitle="Sales Obtained"
+            subtitle="Loan Obtained"
             progress="0.50"
-            increase="+21%"
+          //  increase="+21%"
             icon={
               <PointOfSaleIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -81,6 +82,7 @@ const Dashboard = () => {
             }
           />
         </Box>
+        
         <Box
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
@@ -92,7 +94,7 @@ const Dashboard = () => {
             title="32,441"
             subtitle="New Clients"
             progress="0.30"
-            increase="+5%"
+         //   increase="+5%"
             icon={
               <PersonAddIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -109,9 +111,9 @@ const Dashboard = () => {
         >
           <StatBox
             title="1,325,134"
-            subtitle="Traffic Received"
+            subtitle="Loan Received"
             progress="0.80"
-            increase="+43%"
+          //  increase="+43%"
             icon={
               <TrafficIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -120,6 +122,7 @@ const Dashboard = () => {
           />
         </Box>
       </Box>
+      
     </Box>
   );
 };
